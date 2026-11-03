@@ -1,0 +1,6 @@
+# Estructuras de datos y visualización; los algoritmos son propios.
+pandas>=2.0
+matplotlib>=3.7
+# Ejecución y exportación del único documento de uso.
+jupyter>=1.0
+nbconvert>=7.0
