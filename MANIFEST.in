@@ -2,3 +2,4 @@ include requirements.txt
 recursive-include data *.csv *.md
 include notebooks/entrega.ipynb
 include notebooks/entrega.html
+include notebooks/iris_pca.png

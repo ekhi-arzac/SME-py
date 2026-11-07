@@ -17,6 +17,6 @@ setup(
     project_urls={"Repository": "https://github.com/ekhi-arzac/SME-py"},
     packages=find_packages(include=["sme", "sme.*"]),
     python_requires=">=3.10",
-    install_requires=["pandas>=2.0", "matplotlib>=3.7"],
+    install_requires=["pandas>=2.0", "matplotlib>=3.7", "numpy>=1.24"],
     extras_require={"notebook": ["jupyter>=1.0", "nbconvert>=7.0"]},
 )

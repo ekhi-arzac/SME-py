@@ -7,6 +7,7 @@ La entrega de Python utiliza Iris y contiene:
 
 - `notebooks/entrega.ipynb`: notebook con ejemplos ejecutados de todas las funciones.
 - `notebooks/entrega.html`: versión de lectura del mismo notebook.
+- `notebooks/iris_pca.png`: gráfico PCA con sus tres paneles, listo para la entrega.
 - `data/iris.csv`: datos originales de Iris, con procedencia en `data/README.md`.
 
 El notebook usa únicamente Python y no necesita R ni acceso a internet para cargar datos.
@@ -61,3 +62,25 @@ ds.data.head()
 `Dataset.to_csv()` y `Dataset.read_csv()` escriben y leen valores sin guardar los
 metadatos del objeto: se especifican de nuevo al leer. Las funciones independientes
 siguen disponibles mediante `import sme`.
+
+`plot_pca()` añade una vista exploratoria de Iris completo: proyección PC1–PC2
+coloreada por especie, varianza explicada individual y acumulada, y mapa de pesos
+de los atributos. Centra y estandariza con desviación muestral por defecto;
+`scale=False` permite conservar la escala original. El PCA usa la SVD de NumPy.
+La especie solo colorea y se excluye del cálculo. Admite DataFrame y `Dataset`,
+respetando la clase y las categorías declaradas del objeto.
+
+```python
+import matplotlib.pyplot as plt
+from sme import plot_pca
+
+pca = plot_pca(iris, group="Species", title="Iris · PCA estandarizado")
+print(pca["explained_variance"])
+pca["figure"].savefig("iris_pca.png", dpi=180, bbox_inches="tight")
+plt.show()
+```
+
+La salida incluye `scores`, `loadings` (vectores unitarios), `center`, `scale`,
+`dropped` (constantes omitidas), `figure` y `axes`. Requiere dos filas y dos
+atributos numéricos no constantes. Rechaza ausentes e infinitos en los predictores
+y ausentes en los grupos; las demás columnas no numéricas se excluyen.

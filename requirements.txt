@@ -1,6 +1,7 @@
-# Estructuras de datos y visualización; los algoritmos son propios.
+# Estructuras de datos, visualización y SVD para PCA.
 pandas>=2.0
 matplotlib>=3.7
+numpy>=1.24
 # Ejecución y exportación del único documento de uso.
 jupyter>=1.0
 nbconvert>=7.0
