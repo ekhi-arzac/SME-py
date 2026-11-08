@@ -7,7 +7,7 @@ La entrega de Python contiene:
 
 - `notebooks/entrega.ipynb`: notebook con ejemplos ejecutados de todas las funciones.
 - `notebooks/entrega.html`: versión de lectura del mismo notebook.
-- `src/*.py`: código fuente de la libreria.
+- `sme/*.py`: código fuente de la libreria.
 
 El notebook usa únicamente Python y no necesita R ni acceso a internet para cargar datos.
 Para AUC utiliza las observaciones de versicolor y virginica, con virginica como positiva.
