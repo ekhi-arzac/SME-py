@@ -24,19 +24,6 @@ O instala únicamente el paquete:
 python3 -m pip install ./SME-py
 ```
 
-Para volver a ejecutar y exportar el notebook, desde `SME-py`:
-
-```bash
-jupyter nbconvert --to notebook --execute --inplace notebooks/entrega.ipynb
-jupyter nbconvert --to html --embed-images notebooks/entrega.ipynb
-```
-
-Para generar wheel y distribución fuente, también desde `SME-py`:
-
-```bash
-python3 -m pip install setuptools wheel
-python3 setup.py sdist bdist_wheel
-```
 
 Los archivos se generan en `dist/`. La distribución fuente incluye el notebook,
 su HTML y los datos. El wheel incluye el código del paquete y sus metadatos.
