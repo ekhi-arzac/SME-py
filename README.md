@@ -7,7 +7,6 @@ La entrega de Python utiliza Iris y contiene:
 
 - `notebooks/entrega.ipynb`: notebook con ejemplos ejecutados de todas las funciones.
 - `notebooks/entrega.html`: versión de lectura del mismo notebook.
-- `notebooks/iris_pca.png`: gráfico PCA con sus tres paneles, listo para la entrega.
 - `data/iris.csv`: datos originales de Iris, con procedencia en `data/README.md`.
 
 El notebook usa únicamente Python y no necesita R ni acceso a internet para cargar datos.
