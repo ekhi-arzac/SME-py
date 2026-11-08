@@ -3,11 +3,11 @@
 La distribución instalable se llama `sme-tools` y se importa como `sme`.
 Se construye con setuptools, configurado en `setup.py`.
 
-La entrega de Python utiliza Iris y contiene:
+La entrega de Python contiene:
 
 - `notebooks/entrega.ipynb`: notebook con ejemplos ejecutados de todas las funciones.
 - `notebooks/entrega.html`: versión de lectura del mismo notebook.
-- `data/iris.csv`: datos originales de Iris, con procedencia en `data/README.md`.
+- `src/*.py`: código fuente de la libreria.
 
 El notebook usa únicamente Python y no necesita R ni acceso a internet para cargar datos.
 Para AUC utiliza las observaciones de versicolor y virginica, con virginica como positiva.
